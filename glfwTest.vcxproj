@@ -144,6 +144,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\Camera.h" />
     <ClInclude Include="Include\glm\common.hpp" />
     <ClInclude Include="Include\glm\detail\compute_common.hpp" />
     <ClInclude Include="Include\glm\detail\compute_vector_relational.hpp" />
@@ -572,16 +573,8 @@
     <Content Include="Resources\Textures\Code.png" />
     <Content Include="Resources\Textures\smiley.png" />
     <Content Include="Resources\Textures\wall.jpg" />
-    <Content Include="Shaders\5.1.transform.frag.glsl" />
-    <Content Include="Shaders\5.1.transform.vert.glsl" />
-    <Content Include="Shaders\6.1.coordinate_systems.frag.glsl" />
-    <Content Include="Shaders\6.1.coordinate_systems.vert.glsl" />
-    <Content Include="Shaders\Shader3.3.frag.glsl" />
-    <Content Include="Shaders\Shader3.3.vert.glsl" />
-    <Content Include="Shaders\TextureShader4.2.vert.glsl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Shaders\TextureShader4.2.frag.glsl" />
+    <Content Include="Shaders\7.4.camera.frag.glsl" />
+    <Content Include="Shaders\7.4.camera.vert.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
