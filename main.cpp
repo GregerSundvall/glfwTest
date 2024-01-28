@@ -2,9 +2,9 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #define STB_IMAGE_IMPLEMENTATION
-   #include "stb_image.h"
+#include "stb_image.h"
 
-#include "Shader.h"
+#include "Shaders/Shader.h"
 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -49,7 +49,7 @@ int main()
 
     // build and compile our shader program
     // ------------------------------------
-    Shader ourShader("colorByPos.vertexShader", "colorByPos.fragmentShader"); // you can name your shader files however you like
+    Shader ourShader("Shaders/Shader3.3.vs", "Shaders/Shader3.3.fs"); // you can name your shader files however you like
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------

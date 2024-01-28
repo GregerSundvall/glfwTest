@@ -137,12 +137,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Shaders\Shader.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="red.fragmentShader" />
-    <Content Include="red.vertexShader" />
+    <Content Include="Shaders\Shader3.3.fs" />
+    <Content Include="Shaders\Shader3.3.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
