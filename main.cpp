@@ -12,6 +12,7 @@
 
 #include <iostream>
 
+#include "Code/Model.h"
 #include "Code/Entities/Entity.h"
 
 
@@ -76,14 +77,28 @@ int main()
     Shader shader("Shaders/7.4.camera.vert.glsl", "Shaders/7.4.camera.frag.glsl");
 
 
-    // float verts[] = {-0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
-    //      0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
-    //      0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    //      0.5f,  0.5f, -0.5f,  1.0f, 1.0f,
-    //     -0.5f,  0.5f, -0.5f,  0.0f, 1.0f,
-    //     -0.5f, -0.5f, -0.5f,  0.0f, 0.0f};
-    // auto pos = glm::vec3( 0.0f,  0.0f,  0.0f);
-    // Entity* box1 = new Entity(verts, 30, pos);
+
+    Vertex frontTopLeft = {-1, 1, -1};
+    Vertex frontTopRight = {1, 1, -1};
+    Vertex frontBottomRight = {1, -1, -1};
+    Vertex frontBottomLeft = {-1, -1, -1};
+    Vertex backTopLeft = {-1, 1, 1};
+    Vertex backTopRight = {1, 1, 1};
+    Vertex backBottomRight = {1, -1, 1};
+    Vertex backBottomLeft = {-1, -1, 1};
+
+    Triangle tri1 = {frontTopLeft, frontBottomRight, frontBottomLeft};
+    Triangle tri2 = {frontTopLeft, frontBottomRight, frontBottomLeft};
+    Quad frontFace = {tri1, tri2};
+    
+    tri1 = {backTopLeft, frontTopRight, frontTopLeft};
+    tri2 = {backTopLeft, backTopRight, frontTopRight};
+    Quad topFace = {tri1, tri2};
+
+    
+
+    
+   
     
     // Set up vertex data (and buffer(s)) and configure vertex attributes
     float vertices[] = {
